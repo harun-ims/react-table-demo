@@ -3,6 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+  .col-resizer {
+    display: inline-block;
+    width: 3px;
+    height: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(50%);
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    cursor: col-resize;
+  }
+
+  *:hover > .col-resizer {
+    background-color: #d3d1d1;
+  }
+
   .animate-blink {
     background: linear-gradient(
       to right,
